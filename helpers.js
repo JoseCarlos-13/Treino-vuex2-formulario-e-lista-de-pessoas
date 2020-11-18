@@ -2,7 +2,8 @@ import { mapGetters, mapActions, mapState } from 'vuex'
 
 export const userState = {
 	...mapState('user', [
-		'users'
+		'users',
+		'alertSuccess'
 	]),
 }
 
@@ -15,6 +16,7 @@ export const userComputed = {
 export const userMethods = {
 	...mapActions('user', [
 		'createUser',
-		'loadList'
+		'loadList',
+		'success'
 	])
 }

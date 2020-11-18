@@ -1,6 +1,18 @@
 <template>
   <div>
-      {{users}}
+    <b-col xs="6" sm="6" md="6" lg="6" 
+      offset-md="5">
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+      </tr>
+      <tr v-for="u in users" :key="u.id">
+        <td>{{u.user.name}}</td>
+        <td>{{u.user.age}}</td>
+      </tr>
+    </b-col>
+    
+    
   </div>
 </template>
 
@@ -14,7 +26,7 @@ export default {
   },
 
   methods: {
-   ...userMethods,
+   ...userMethods
   },
 
   mounted(){
